@@ -36,3 +36,7 @@ Route::get('/logout','AdminController@logout');
 Route::get('/add-category-product','CategoryProduct@add_category_product');
 Route::get('/all-category-product','CategoryProduct@all_category_product');
 Route::post('/save-category-product','CategoryProduct@save_category_product');
+Route::get('/danh-muc-sanpham/{slug_category_product}','CategoryProduct@show_category_home');
+Route::get('/thuong-hieu-sanpham/{brand_slug}','BrandProduct@show_brand_home');
+
+Route::get('/chi-tiet-san-pham/{product_id}','ProductController@details_product');
