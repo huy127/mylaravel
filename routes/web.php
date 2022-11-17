@@ -40,3 +40,12 @@ Route::get('/danh-muc-sanpham/{slug_category_product}','CategoryProduct@show_cat
 Route::get('/thuong-hieu-sanpham/{brand_slug}','BrandProduct@show_brand_home');
 
 Route::get('/chi-tiet-san-pham/{product_id}','ProductController@details_product');
+Route::post('/save-cart','CartController@save_cart');
+Route::get('/show-cart','CartController@show_cart');
+Route::get('/login-checkout','CheckoutController@login_checkout');
+
+Route::post('/add-customer','CheckoutController@add_customer');
+Route::get('/checkout','CheckoutController@checkout');
+Route::post('/login-customer','CheckoutController@login_customer');
+Route::get('/manage-order','CheckoutController@manage_order');
+Route::get('/view-order/{orderId}','CheckoutController@view_order');
